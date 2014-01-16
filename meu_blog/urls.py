@@ -14,4 +14,5 @@ urlpatterns = patterns('',
 urlpatterns += patterns('blog.views',
                         url(r'^home/$', 'home_view'),
 						url(r'^latest/$', 'latest_books'),
+						url(r'^$', 'latest_books'),
 						)
