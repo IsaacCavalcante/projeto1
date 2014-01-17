@@ -1,12 +1,24 @@
-<html><head><title>Books</title></head>
+<html><head>
+<meta http-equiv="refresh" content="5;URL=http://www.google.com">
+<title>Books</title></head>
 <body>
-<h1>Books</h1>
+<h1 class="titulo">Books</h1>
 <hr>
 <ul>
-<i><h3>lista</h3></i>
+<i><h3 class="titulo">lista</h3></i>
 {% for book in book_list %}
-<li>{{ book.name }}</li>
+<li class="titulo">{{ book.name }}</li>
 {% endfor %}
 </ul>
 <hr>
 </body></html>
+
+<style>
+.titulo {
+		color:red;
+		font-size:70px;
+		}
+body {
+		background-color:#2ec077;
+		}
+</style>
