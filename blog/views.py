@@ -7,9 +7,10 @@ def latest_books(request):
     return render(request, 'latest_books.html', {'book_list': book_list})
 
 def home_view(request):
-       artigo = Artigo.objects.all()[0]
-       return render(request, 'artigo_archive.html', {'artigo':artigo})
-
-
+	artigo = Artigo.objects.all()[0]
+	return render(request, 'artigo_archive.html', {'artigo':artigo})
+	
+def pagina_de_redirecionamento(request):
+	return render(request, 'pagina_de_redirecionamento.html',)
 
 # Create your views here.
