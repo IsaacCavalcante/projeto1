@@ -13,4 +13,7 @@ def home_view(request):
 def pagina_de_redirecionamento(request):
 	return render(request, 'pagina_de_redirecionamento.html',)
 
+def pagina_logon(request):
+	return render(request, 'teste.html',)
+
 # Create your views here.

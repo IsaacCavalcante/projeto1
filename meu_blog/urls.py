@@ -14,5 +14,6 @@ urlpatterns = patterns('',
 urlpatterns += patterns('blog.views',
                         url(r'^home/$', 'home_view'),
 						url(r'^latest/$', 'latest_books'),
+                        url(r'^logon/$', 'pagina_logon'),
 						url(r'^$', 'pagina_de_redirecionamento'),
 						)
