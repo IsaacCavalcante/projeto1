@@ -1,6 +1,8 @@
 @charset "UTF-8"; /*Define a linguagem como latina*/
+@import url(http://fonts.googleapis.com/css?family=Audiowide);
 
-div.centro {
+
+div#centro {
 	width:100px;
 	height:100px;
 	position:absolute;
@@ -8,4 +10,28 @@ div.centro {
 	left:50%;
 	margin-top:-50px;
 	margin-left:-50px;
+    background-color: #dddddd;
+}
+
+img.ca {
+    width:350px;
+	height:350px;
+	position:absolute;
+	top:400px;
+	left:855px;
+	margin-top:-50px;
+	margin-left:-50px;
+	opacity:0.25;
+	-moz-opacity: 0.25;
+	filter: alpha(opacity=25);
+
+}
+
+div#centro form#form_login label {
+    font-family: 'Audiowide', cursive;
+    text-shadow: 2px 2px 2px #66030c;
+}
+
+div#centro form#form_login h3{
+    margin: 0px 0px 0px 0px;
 }

@@ -2,22 +2,21 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}_css/centralizar.css">
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}_css/centralizar.css"> <!--  Esse "{{STATIC_URL}}" indica o caminho da pasta static padronizada pelo django -->
     <title>Aplicação de teste</title>
-    <style>
-        label{display:block;}
-    </style>
 </head>
 
 <body>
-<div class="centro">
-    <form>
-        <label for="login">Login
-            <input name="login" placeholder="login" required type="text">
+<img src="{{STATIC_URL}}_img/brasao.jpg" class="ca">
+<div id="centro">
+    <form method="post" action="" id="form_login"> <!--Informa para o server o acionamento do método POST-->
+        {% csrf_token %} <!--Código de segurança, sem isso a form da erro-->
+        <label for="login"><h3>Login</h3>
+            <input name="user_name" placeholder="nome de usuario" required type="text">
         </label>
         <br/>
-        <label for="senha">Senha
-            <input name="senha" placeholder="senha" required type="password">
+        <label for="senha"><h3>Senha</h3>
+            <input name="password" placeholder="senha" required type="password">
         </label>
         <input type="submit" value="Enviar" />
     </form>
