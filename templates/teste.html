@@ -3,25 +3,36 @@
 <head>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}_css/centralizar.css"> <!--  Esse "{{STATIC_URL}}" indica o caminho da pasta static padronizada pelo django -->
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}_css/bootstrap.css">
     <title>Aplicação de teste</title>
 </head>
 
 <body>
-<img src="{{STATIC_URL}}_img/brasao.jpg" class="ca">
+    <div class="brasao-container">
+        <img src="{{STATIC_URL}}_img/brasao.jpg" class="ca">
+    </div>
 <div id="centro">
     <form method="post" action="" id="form_login"> <!--Informa para o server o acionamento do método POST-->
         {% csrf_token %} <!--Código de segurança, sem isso a form da erro-->
         <label for="login"><h3>Login</h3>
-            <input name="user_name" placeholder="nome de usuario" required type="text">
+            <input class="form-control tamanho-campo" name="user_name" placeholder="nome de usuario" required type="text" >
         </label>
         <br/>
         <label for="senha"><h3>Senha</h3>
-            <input name="password" placeholder="senha" required type="password">
+            <input class="form-control tamanho-campo" name="password" placeholder="senha" required type="password">
         </label>
-        <input type="submit" value="Enviar" />
+        <button class="btn btn-success" type="submit">Log in</button>
     </form>
 </div>
 
 </body>
 
 </html>
+
+<style>
+    input.tamanho-campo{
+        width: 150px;
+        height: 40px;
+    }
+
+</style>
