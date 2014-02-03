@@ -36,7 +36,7 @@ img.ca {
 
 div#centro form#form_login label {
     font-family: 'Audiowide', cursive;
-    text-shadow: 2px 2px 2px #66030c;
+    text-shadow: 2px 2px 2px;
 }
 
 div#centro form#form_login h3{

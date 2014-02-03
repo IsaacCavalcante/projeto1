@@ -15,7 +15,7 @@
     <form method="post" action="" id="form_login"> <!--Informa para o server o acionamento do método POST-->
         {% csrf_token %} <!--Código de segurança, sem isso a form da erro-->
         <label for="login"><h3>Login</h3>
-            <input class="form-control tamanho-campo" name="user_name" placeholder="nome de usuario" required type="text" >
+            <input class="form-control tamanho-campo" name="user_name" placeholder="usuário" required type="text" >
         </label>
         <br/>
         <label for="senha"><h3>Senha</h3>
