@@ -11,6 +11,12 @@
       <library>
         <url>file://$USER_HOME$/.PyCharm30/config/jdbc-drivers/sqlite-jdbc-3.7.6.3-20110609.081603-3.jar</url>
       </library>
+      <library>
+        <url>file://$USER_HOME$/.PyCharm30/config/jdbc-drivers/xerial-sqlite-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.PyCharm30/config/jdbc-drivers/sqlite-jdbc-3.7.6.3-20110609.081603-3.jar</url>
+      </library>
     </libraries>
     <schema name="" catalog=""/>
     <table name="auth_group" schema="" catalog="" type="TABLE">

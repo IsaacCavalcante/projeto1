@@ -1,9 +1,23 @@
-<html>
-<body>
+{% extends "base.html" %}
 
-<h1>Meu blog</h1>
+{% block conteudo %}
+    <a href="artigo/add" class="btn btn-info">Adicionar conteúdo</a>
+    {% for artigo in artigo %}
 
-<h2>{{artigo.titulo}}</h2>
-{{artigo.conteudo}}
-</body>
-</html>
+        <div class="artigo">
+            <a href="{{ artigo.get_absolute_url }}"><h2>{{ artigo.titulo }}</h2></a>
+
+            <div class="conteudo">
+                Publicado há {{ artigo.publicacao|timesince }}<br/>
+                {{ artigo.descricao }}
+            </div>
+
+        </div>
+
+        <form class="form-horizontal" role="form" method="post" action="artigo/del/{{ artigo.id }}/">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-info">Deletar</button>
+        </form>
+
+    {% endfor %}
+{% endblock %}

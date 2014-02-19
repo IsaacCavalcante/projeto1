@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import user_passes_test
 
 
 def latest_books(request):
-    book_list = Book.objects.order_by('-pub_date')[:10]
+    book_list = Book.objects.order_by('-pub_date')
     return render(request, 'latest_books.html', {'book_list': book_list})
 
 def usuario_esta_logado(user):# Verifica se usuario esta logado
@@ -17,20 +17,52 @@ def logout(request):
     auth.logout(request)
     return HttpResponseRedirect("/deslogado")
 
-@user_passes_test(usuario_esta_logado) #Executa usuario_esta_logado antes de home_view, e usuaio_esta_logado verifica se o usuario esta logado, so permitindo, assim, que home_view seja executada se usuario_esta_logado retornar true
+def artigo(request, artigo_id):
+    artigo = Artigo.objects.get(id=artigo_id)
+    if request.method == 'POST':
+        artigo.link_qrcode = request.POST.get('link_qrcode', '')
+        artigo.save()
+    return render(request,'artigo.html', locals())
+
 def home_view(request):
-	artigo = Artigo.objects.all()[0]
-	return render(request, 'artigo_archive.html', {'artigo':artigo})
-	
+    artigo = Artigo.objects.all()
+    return render(request, 'artigo_archive.html', {'artigo':artigo})
+
 def pagina_de_redirecionamento(request):
-	return render(request, 'pagina_de_redirecionamento.html',)
+    return render(request, 'pagina_de_redirecionamento.html',)
 
 def logon_sucesso(request):
-	return render(request, 'logon_sucesso.html',)
+    return render(request, 'logon_sucesso.html',)
+
+def artigo_add(request):
+    if request.method == 'POST':
+        title = request.POST.get('titulo', '')
+        link= request.POST.get('link', '')
+        descricao= request.POST.get('description', '')
+        artigo=Artigo(titulo=title,link=link,descricao=descricao)
+        artigo.save()
+        return HttpResponseRedirect('/')
+    return render(request,'adicionar_conteudo.html')
+
+def artigo_del(request, artigo_id):
+    artigo = Artigo.objects.get(id=artigo_id)
+    if request.method == 'POST':
+        artigo.delete()
+        print artigo_id
+        return HttpResponseRedirect('/')
+
+def artigo_redirect(request, artigo_id):
+    artigo = Artigo.objects.get(id=artigo_id)
+    return HttpResponseRedirect(artigo.link)
+
 
 @user_passes_test(usuario_esta_logado)
 def deslogado(request):
     return render(request,'deslogado.html')
+
+@user_passes_test(usuario_esta_logado) #Executa usuario_esta_logado antes de home_view, e usuaio_esta_logado verifica se o usuario esta logado, so permitindo, assim, que home_view seja executada se usuario_esta_logado retornar true
+def autorizado(request):
+    return render(request, 'autorizado.html',)
 
 
 

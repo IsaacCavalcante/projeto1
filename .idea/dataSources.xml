@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3570220981">
+  <component name="DataSourceManagerImpl" format="xml" hash="289503705">
     <data-source source="LOCAL" name="Django default" uuid="e7c0bbd9-6f4b-4071-9907-3bfe711deba6">
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Projetos\meu_blog\banco.db</jdbc-url>
       <libraries>
+        <library>
+          <url>file://$USER_HOME$/.PyCharm30/config/jdbc-drivers/xerial-sqlite-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.PyCharm30/config/jdbc-drivers/sqlite-jdbc-3.7.6.3-20110609.081603-3.jar</url>
+        </library>
         <library>
           <url>file://$USER_HOME$/.PyCharm30/config/jdbc-drivers/xerial-sqlite-license.txt</url>
         </library>

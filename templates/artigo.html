@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{ artigo.titulo }} - {{ block.super }}{% endblock %}
+
+{% block h1 %}{{ artigo.titulo }}{% endblock %}
+
+{% block conteudo %}
+    <img src="{{ artigo.link_qrcode }}">
+    Gere a QRCode a partir desse link: <span>{{ request.META.HTTP_HOST }}/artigo/redirect/{{ artigo.id }}</span>
+    <form class="form-horizontal" role="form" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Link da QRCode</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="link_qrcode" placeholder="link da QR Code aqui">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-info">Adicionar</button>
+    </form>
+
+    {{ artigo.descricao }}
+{% endblock %}

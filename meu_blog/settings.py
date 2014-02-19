@@ -55,6 +55,7 @@ ROOT_URLCONF = 'meu_blog.urls'
 WSGI_APPLICATION = 'meu_blog.wsgi.application'
 
 
+
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
@@ -68,9 +69,9 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Fortaleza'
 
 USE_I18N = True
 
@@ -92,3 +93,4 @@ TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').repl
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
