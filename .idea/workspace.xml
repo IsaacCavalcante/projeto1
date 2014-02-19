@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15a393a1-94ee-4e50-bd2d-0105f3e8e527" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/adicionar_conteudo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/artigo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/autorizado.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/rodape.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/banco.db" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/artigo_archive.html" afterPath="$PROJECT_DIR$/templates/artigo_archive.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/latest_books.html" afterPath="$PROJECT_DIR$/templates/latest_books.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/logon_sucesso.html" afterPath="$PROJECT_DIR$/templates/logon_sucesso.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/models.py" afterPath="$PROJECT_DIR$/blog/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meu_blog/settings.py" afterPath="$PROJECT_DIR$/meu_blog/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meu_blog/urls.py" afterPath="$PROJECT_DIR$/meu_blog/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/views.py" afterPath="$PROJECT_DIR$/blog/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/artigo.html" afterPath="$PROJECT_DIR$/templates/artigo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="meu_blog.iws" />
@@ -40,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="820" selection-end="820" vertical-scroll-proportion="0.46850392" vertical-offset="102" max-vertical-offset="1513">
+            <state line="25" column="0" selection-start="820" selection-end="820" vertical-scroll-proportion="-9.52" vertical-offset="102" max-vertical-offset="1513">
               <folding />
             </state>
           </provider>
@@ -58,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="artigo.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="artigo.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/artigo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="39" selection-start="250" selection-end="250" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="459">
+            <state line="17" column="69" selection-start="772" selection-end="772" vertical-scroll-proportion="0.5557692" vertical-offset="0" max-vertical-offset="520">
               <folding />
             </state>
           </provider>
@@ -618,13 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/artigo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="39" selection-start="250" selection-end="250" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meu_blog/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="74" selection-start="1194" selection-end="1194" vertical-scroll-proportion="-15.64" vertical-offset="0" max-vertical-offset="527">
@@ -641,7 +620,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="820" selection-end="820" vertical-scroll-proportion="0.46850392" vertical-offset="102" max-vertical-offset="1513">
+        <state line="25" column="0" selection-start="820" selection-end="820" vertical-scroll-proportion="-9.52" vertical-offset="102" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/artigo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="69" selection-start="772" selection-end="772" vertical-scroll-proportion="0.5557692" vertical-offset="0" max-vertical-offset="520">
           <folding />
         </state>
       </provider>

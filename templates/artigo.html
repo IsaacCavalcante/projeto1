@@ -6,7 +6,7 @@
 
 {% block conteudo %}
     <img src="{{ artigo.link_qrcode }}">
-    Gere a QRCode a partir desse link: <span>{{ request.META.HTTP_HOST }}/artigo/redirect/{{ artigo.id }}</span>
+    Gere a QRCode a partir desse link: <span>http://{{ request.META.HTTP_HOST }}/artigo/redirect/{{ artigo.id }}</span>
     <form class="form-horizontal" role="form" method="post">
         {% csrf_token %}
         <div class="form-group">
