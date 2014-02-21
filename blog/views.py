@@ -21,8 +21,24 @@ def artigo(request, artigo_id):
     artigo = Artigo.objects.get(id=artigo_id)
     if request.method == 'POST':
         artigo.link_qrcode = request.POST.get('link_qrcode', '')
+        artigo.titulo = request.POST.get('titulo', '')
+        artigo.tipo = request.POST.get('tipo', '')
+        artigo.tema = request.POST.get('tema', '')
+        artigo.link = request.POST.get('link', '')
         artigo.save()
+        return HttpResponseRedirect('/')
     return render(request,'artigo.html', locals())
+
+def artigo_add(request):
+    if request.method == 'POST':
+        titulo = request.POST.get('titulo', '')
+        link= request.POST.get('link', '')
+        tema= request.POST.get('tema', '')
+        tipo= request.POST.get('tipo', '')
+        artigo=Artigo(titulo=titulo, link=link, tema=tema, tipo=tipo)
+        artigo.save()
+        return HttpResponseRedirect('/')
+    return render(request,'adicionar_conteudo.html')
 
 def home_view(request):
     artigo = Artigo.objects.all()
@@ -34,21 +50,10 @@ def pagina_de_redirecionamento(request):
 def logon_sucesso(request):
     return render(request, 'logon_sucesso.html',)
 
-def artigo_add(request):
-    if request.method == 'POST':
-        title = request.POST.get('titulo', '')
-        link= request.POST.get('link', '')
-        descricao= request.POST.get('description', '')
-        artigo=Artigo(titulo=title,link=link,descricao=descricao)
-        artigo.save()
-        return HttpResponseRedirect('/')
-    return render(request,'adicionar_conteudo.html')
-
 def artigo_del(request, artigo_id):
     artigo = Artigo.objects.get(id=artigo_id)
     if request.method == 'POST':
         artigo.delete()
-        print artigo_id
         return HttpResponseRedirect('/')
 
 def artigo_redirect(request, artigo_id):

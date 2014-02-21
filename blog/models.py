@@ -6,9 +6,9 @@ class Artigo(models.Model):
         ordering = ('-publicacao',)
 
     titulo = models.CharField(max_length=100)
-    conteudo = models.TextField()
     link = models.TextField()
-    descricao = models.TextField()
+    tema = models.TextField()
+    tipo = models.TextField()
     publicacao = models.DateTimeField(default=datetime.now, blank=True)
     link_qrcode = models.TextField()
 

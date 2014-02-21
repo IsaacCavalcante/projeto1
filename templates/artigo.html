@@ -5,8 +5,13 @@
 {% block h1 %}{{ artigo.titulo }}{% endblock %}
 
 {% block conteudo %}
-    <img src="{{ artigo.link_qrcode }}">
-    Gere a QRCode a partir desse link: <span>http://{{ request.META.HTTP_HOST }}/artigo/redirect/{{ artigo.id }}</span>
+    Gere a QRCode a partir desse link: <span>http://{{ request.META.HTTP_HOST }}/artigo/redirect/{{ artigo.id }}</span><br/>
+    <img src="{{ artigo.link_qrcode }}"><br/>
+        {{ artigo.titulo }}<br/>
+        {{ artigo.tema }}<br/>
+        {{ artigo.tipo }}<br/>
+        {{ artigo.link }}<br/>
+
     <form class="form-horizontal" role="form" method="post">
         {% csrf_token %}
         <div class="form-group">
@@ -15,8 +20,36 @@
                 <input type="text" class="form-control" name="link_qrcode" placeholder="link da QR Code aqui">
             </div>
         </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Título</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="titulo" placeholder="Ex: Aulas de HTML5">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Tema</label>
+            <div class="col-sm-8">
+                <textarea type="text" class="form-control" name="tema" placeholder="Ex: Curso de HTML5 com Gustavo Guanabara"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Tipo</label>
+            <div class="col-sm-8">
+                <textarea type="text" class="form-control" name="tipo" placeholder="Ex: Video"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Link</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="link" placeholder="Ex: http://www.youtube.com/watch?v=SDAr3NIbIVM">
+            </div>
+        </div>
+
         <button type="submit" class="btn btn-info">Adicionar</button>
     </form>
 
-    {{ artigo.descricao }}
 {% endblock %}
